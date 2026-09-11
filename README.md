@@ -12,7 +12,7 @@ TF-IDF 기반 classical ML(LightGBM, SVM)과 트랜스포머 기반 언어모델
 
 이 프로젝트는 TF-IDF + classical ML부터 트랜스포머 파인튜닝까지 복잡도가 점차 증가하는 6개 모델을 구축·비교하고, local 검증 점수가 리더보드로 이어지지 않은 원인을 규명하는 진단 과정까지 포함한다.
 
-- 대회: [DACON 236112](https://dacon.io/competitions/official/236112)
+- 대회: [DACON](https://dacon.io/competitions/official/236112)
 - 평가지표: **Accuracy**
 
 
