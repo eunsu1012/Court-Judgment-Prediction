@@ -100,7 +100,7 @@ TF-IDF 기반 classical ML(LightGBM, SVM)과 트랜스포머 기반 언어모델
 | TF-IDF + LightGBM | 0.6655 | 0.3996 | 0.5000 | 완료 — 다수 클래스 수렴 |
 | TF-IDF + SVM (class_weight 없음, C=0.02) | 0.6667 | ~0.42 | 0.5081 | 완료 — 다수 클래스와 유사 |
 | Legal-BERT | 0.60–0.63 | 0.52–0.54 (참고치) | 0.5000 | 완료 |
-| DeBERTa-v3-base | 0.6655 | 0.3996 | 미제출 | 완료 — 전 fold 다수 클래스 수렴 |
+| DeBERTa-v3-base | 0.6655 | 0.3996 | 0.5000 | 완료 — 전 fold 다수 클래스 수렴 |
 | RoBERTa-base | **0.6711** | **0.4282** | 0.5000 | 완료 — local 최고이나 LB는 그대로 |
 
 
@@ -153,15 +153,6 @@ $$\text{Acc} = s \cdot q + (1-s)(1-q), \quad q \approx 0.5 \;\Rightarrow\; \text
 - 지금까지 어떤 모델도 unseen 데이터에서 majority baseline을 뚜렷하게 넘는 안정적인 예측 신호를 보여주지 못함
 - 도메인 특화 사전학습(Legal-BERT)이 일반 도메인 모델보다 낫지 않았음 — EU 법률 코퍼스와 미 연방대법원 서술체 간 도메인 불일치로 추정
 - 동일 모델·동일 하이퍼파라미터에서도 fold별 학습 안정성 편차가 큼(RoBERTa fold 1 vs. fold 2)
-
-
-## 🔧 Future Work
-
-- all-`0` 제출로 test set 클래스 분포 확정
-- RoBERTa/DeBERTa-v3 epoch 확대 및 learning rate 재탐색으로 fold별 다수 클래스 수렴 완화
-- 각 모델의 fold별 OOF 확률 저장 → 소프트보팅 앙상블
-- deberta-v3-large로 스케일업 검토
-- test 분포가 train과 다르다고 확정될 경우, train을 50:50으로 리밸런싱하는 방안 검토
 
 
 ## 👤 Author
