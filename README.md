@@ -94,14 +94,14 @@ TF-IDF 기반 classical ML(LightGBM, SVM)과 트랜스포머 기반 언어모델
 
 ## 📊 Model Evaluation
 
-| 모델 | Local OOF Accuracy | Local OOF Macro F1 | LB Score | 상태 |
+| 모델 | Local OOF Accuracy | Local OOF Macro F1 | 상태 |
 |---|---|---|---|---|
-| TF-IDF + Logistic Regression (baseline) | - | - | 0.5097 | 완료 |
-| TF-IDF + LightGBM | 0.6655 | 0.3996 | 0.5000 | 완료 — 다수 클래스 수렴 |
-| TF-IDF + SVM (class_weight 없음, C=0.02) | 0.6667 | ~0.42 | 0.5081 | 완료 — 다수 클래스와 유사 |
-| Legal-BERT | 0.60–0.63 | 0.52–0.54 (참고치) | 0.5000 | 완료 |
-| DeBERTa-v3-base | 0.6655 | 0.3996 | 0.5000 | 완료 — 전 fold 다수 클래스 수렴 |
-| RoBERTa-base | **0.6711** | **0.4282** | 0.5000 | 완료 — local 최고이나 LB는 그대로 |
+| TF-IDF + Logistic Regression (baseline) | - | - | 완료 |
+| TF-IDF + LightGBM | 0.6655 | 0.3996 | 완료 — 다수 클래스 수렴 |
+| TF-IDF + SVM (class_weight 없음, C=0.02) | 0.6667 | ~0.42 | 완료 — 다수 클래스와 유사 |
+| Legal-BERT | 0.60–0.63 | 0.52–0.54 (참고치) | 완료 |
+| DeBERTa-v3-base | 0.6655 | 0.3996 | 완료 — 전 fold 다수 클래스 수렴 |
+| RoBERTa-base | **0.6711** | **0.4282** | 완료 — local 최고|
 
 
 ## ⚠️ Known Issue: Local CV vs. LB 점수 괴리
