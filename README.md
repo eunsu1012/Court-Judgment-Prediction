@@ -95,7 +95,7 @@ TF-IDF 기반 classical ML(LightGBM, SVM)과 트랜스포머 기반 언어모델
 ## 📊 Model Evaluation
 
 | 모델 | Local OOF Accuracy | Local OOF Macro F1 | 상태 |
-|---|---|---|---|---|
+|---|---|---|---|
 | TF-IDF + Logistic Regression (baseline) | - | - | 완료 |
 | TF-IDF + LightGBM | 0.6655 | 0.3996 | 완료 — 다수 클래스 수렴 |
 | TF-IDF + SVM (class_weight 없음, C=0.02) | 0.6667 | ~0.42 | 완료 — 다수 클래스와 유사 |
